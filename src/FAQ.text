@@ -1,0 +1,44 @@
+<h2>Frequently Asked Questions</h2>
+        <section className="technologies">
+
+        <Accordion heading="What technologies do I use to build the website?">
+        <dl>
+          <dt>Programming Languages</dt>
+          <dd>JavaScript, HTML, CSS</dd>
+          <dt>JavaScript Frameworks</dt>
+          <dd>EmberJS, ReactJS, AngularJS</dd>
+          <dt>Web Accessibility</dt>
+          <dd>WCAG 2.0, WAI ARIA</dd>
+          <dt>Content Management System</dt>
+          <dd>WordPress</dd>
+        </dl>
+        <p tabIndex="0">
+          In addition to the above, I always try to stay abreast of new
+          technologies.
+        </p>
+      </Accordion>
+      <Accordion heading="Do I work with mobile devices?">
+        <p tabIndex="0">
+          The website will of course be mobile friendly automatically. Which
+          means, the same website can be viewed on tablet and phone and you can
+          notice the layout adjust seamlessly. However, if you are thinking of
+          mobile application (Apps) that is not the case.
+        </p>
+      </Accordion>
+      <Accordion heading="How would I communicate for a freelance project?">
+        <p tabIndex="0">
+          I will be continuosly communicating with the owner of the website all
+          along the process. It is through email/ phone and video conference/
+          screen sharing.
+        </p>
+      </Accordion>
+      <Accordion heading="What is the duration and pricing for getting the website up?">
+        <p tabIndex="0">
+          It all depends on the project. I have worked on
+          various kinds and sizes of websites so far and with both greenfield and legacy 
+          based projects. I have also worked on
+          websites that were driven entirely by data, driven by behaviour of the
+          user and so on.
+        </p>
+      </Accordion>
+        </section>

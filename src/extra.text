@@ -1,0 +1,25 @@
+<li role="presentation">
+  <Link
+    tabIndex="0"
+    role="menuitem"
+    to="/services"
+    onKeyDown={onArrowHit}
+  >
+    Profile
+  </Link>
+</li>
+<li role="presentation">
+  <Link
+    tabIndex="0"
+    role="menuitem"
+    to="/codesamples"
+    onKeyDown={onArrowHit}
+  >
+    Code
+  </Link>
+</li>
+<li role="presentation">
+  <Link tabIndex="0" role="menuitem" to="/contact" onKeyDown={onArrowHit}>
+    Contact
+  </Link>
+</li>
