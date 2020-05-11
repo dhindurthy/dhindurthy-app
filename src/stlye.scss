@@ -1,199 +1,24 @@
-$heading-color: rgba(4, 107, 153, 1); //blue
-$nav-color: rgba(254, 215, 102, 1); //yellow
-$text-color: rgba(71, 115, 170, 1);
-$body-background-3: rgb(255, 255, 255);
+// @import 'variables-color';
 
-.App {
-  font-family: "Oswald", sans-serif;
-  // font-family: 'Roboto Condensed', sans-serif; //for navs
-  font-size: 1.25rem;
-  line-height: 1.5;
-  background-image: url("background-evening-chicago.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-@media only screen and (max-width: 900px) {//900px and below
-  .App{
-    background-image: url("left-half.jpg");
-    .email {
-      display: none;
-    }
-    .power {
-      display: none;
-    }
-  }
-}
-@media only screen and (max-width: 600px) {//600px and below
-  .App{
-    background-image: url("middle-half.png");
-    .email {
-      display: none;
-    }
-    .power {
-      display: none;
-    }
-  }
-}
-@media only screen and (max-height: 500px) {//500px and below
-  .App{
-    .email {
-      display: none;
-    }
-  }
-}
 body {
-  margin: 0 auto;
-  background-color: $text-color;
-  color: $text-color;
-  section:focus,
-  p:focus,
-  dl:focus,
-  ul:focus {
-    outline-width: 0.15rem;
-    outline-style: dashed;
-    outline-color: $nav-color;
+  &.color {
+    @import 'variables-color';
+    @import 'index';
+    @import 'main';
+    @import 'services';
+    @import 'codesamples';
+    @import 'contact';
+  
+    margin: 0 auto;
   }
-  ul {
-    padding: 0.1rem;
-  }
+  &.bnw {
+    @import 'variables-bnw';
+    @import 'index';
+    @import 'main';
+    @import 'services';
+    @import 'codesamples';
+    @import 'contact';
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $heading-color;
-    font-family: "Oswald", sans-serif;
+    margin: 0 auto;
   }
-  ::selection {
-    background: $nav-color; /* WebKit/Blink Browsers */
-    color: black;
-  }
-  ::-moz-selection {
-    background: $nav-color; /* Gecko Browsers */
-    color: black;
-  }
-}
-.container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 2% 24.5% 24.5% 24.5% 24.5%;
-  grid-template-rows: 12% 76% 12%;
-  grid-template-areas:
-    "header header header header header"
-    "sidebar main main main main"
-    "footer footer footer footer footer";
-
-  // align-items: center;
-  justify-content: center;
-}
-ul.navigation {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  padding-bottom: 0.25rem; //exception
-  margin: 0;
-  background-color: $heading-color;
-  font-size: 1.5rem;
-  li {
-    background-color: inherit;
-    flex: 0 0 auto;
-    a {
-      text-decoration: none;
-      padding-bottom: 0.5rem; //exception
-    }
-  }
-  a,
-  .inline-codesample-link {
-    // background-color: inherit;
-    color: $nav-color;
-    margin: 0.5rem;
-    // margin-right: 0;//exception to make the menu top smaller
-    padding: 0.25rem; //any chnage to this should follow up with ul.navigation-li-a
-  }
-  a:hover,
-  .inline-codesample-link:hover {
-    cursor: pointer;
-    color: $heading-color;
-    background-color: $nav-color;
-  }
-  a:focus,
-  .inline-codesample-link:focus {
-    color: $heading-color;
-    background-color: $nav-color;
-    outline: 0.25rem solid $heading-color !important;
-  }
-  .activeStyle  { 
-    color: $heading-color;
-    background-color: $nav-color;
-    outline: 0.25rem solid $heading-color !important;
-  }
-}
-
-header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  ul.nav-list {
-    justify-content: flex-end;
-  }
-}
-aside {
-  grid-area: sidebar;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  // border: 1px solid white;
-  .email {
-    color: $nav-color;
-    font-size: 0.75rem;
-    font-weight: bold;
-    // font-variant: small-caps;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    text-transform: uppercase;
-    text-shadow: 0.10rem 0.10rem 0.10rem #000000;
-    margin:0;
-    // line-height: 1;
-  }
-}
-main {
-  grid-area: main;
-  display: flex;
-  align-items: center;
-}
-footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .footer-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    ul.footer-list {
-      justify-content: flex-start;
-    }
-  }
-  .power {
-    align-self: flex-end;
-    display: flex;
-    justify-content: center;
-    font-size: 0.75rem;
-    color: $nav-color;
-    text-shadow: 0.5rem 0.5rem 0.75rem #000000;
-    margin:0;
-  }
-}
-
-.services-page,
-.codesamples-page,
-.contact-page {
-  overflow-y: auto;
-  height: 97.5%;
-  padding: 0.75rem;
-  font-family: "Roboto Condensed", sans-serif;
-  background-color: $body-background-3;
 }

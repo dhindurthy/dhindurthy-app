@@ -1,8 +1,3 @@
-$heading-color: rgba(4, 107, 153, 1);
-$nav-color: rgba(254, 215, 102, 1);
-$text-color: rgba(71, 115, 170, 1);
-$body-background-3: rgb(255, 255, 255);
-
 .main-page {
   width: 95vw;
   // overflow-y: auto;
@@ -15,7 +10,7 @@ $body-background-3: rgb(255, 255, 255);
     text-align:center;
     font-size: 2.75em;
     color: $nav-color;
-    text-shadow: 0.5rem 0.5rem 0.75rem #000000;
+    text-shadow: 0.5rem 0.5rem 0.75rem $black;
     span {
       font-size: 1.5em;
       font-weight:900;

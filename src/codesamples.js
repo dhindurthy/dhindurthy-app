@@ -17,6 +17,20 @@ function Codesamples(props) {
         sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
       />
       
+      <iframe
+     src="https://codesandbox.io/embed/movie-search-11keq?fontsize=14&hidenavigation=1&theme=dark"
+     className="sandbox-iframe"
+     title="movie-search"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+    <iframe
+     src="https://codesandbox.io/embed/react-dragndrop-2910q?fontsize=14&hidenavigation=1&theme=dark"
+     title="react-dragndrop"
+     className="sandbox-iframe"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
       <iframe src="https://codesandbox.io/embed/reactfirebasecrud-u9uro?fontsize=14" 
       title="react-firebase-crud" 
       allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" 

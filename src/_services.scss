@@ -1,68 +1,10 @@
-$heading-color: rgba(4, 107, 153, 1);
-$nav-color: rgba(254, 215, 102, 1);
-$text-color: rgba(71, 115, 170, 1);
-$body-background-3: rgb(255, 255, 255);
-
 .services-page {
   .main-page-heading {
     display: none;
   }
   display: flex;
-  // justify-content: center;
-  .section-nav {
-    display:flex;
-    align-items: center;
-    height: 100%;
-    padding-left: 0.5em;
-    // position: fixed
-    // flex-direction: column;
-    a {
-      display: block;
-      padding: 0.05em;
-      padding-right: 0.25em;
-      padding-left: 0.25em;
-      color: $body-background-3;
-      font-size: 0.70em;
-      &.hover-style {
-        cursor: pointer;
-        color: $nav-color;
-      }
-    }
-  }
-  
   color: $body-background-3;
-  background-color: rgba(
-    71,
-    115,
-    170,
-    0.90
-  ); //#4773aa; //rgba(71, 115, 170, 0.75);
-  // background-color: transparent;;
-  ul {
-    list-style: none;
-  }
-  p {
-    text-align: left;
-    font-size: 1.2em;
-  }
-  a {
-    color: $text-color;
-    margin: 0;
-  }
-  a:hover {
-    cursor: pointer;
-    color: $nav-color;
-  }
-  a:focus {
-    color: $nav-color;
-    outline: 0.15rem dashed $nav-color !important;
-  }
-  .inline-link {
-    padding: 0.05em;
-    padding-right: 0.25em;
-    padding-left: 0.25em;
-    color: $body-background-3;
-  }
+  background-color: $transparent-background-services;
 
   .about-section {
     overflow-y: scroll;
@@ -70,10 +12,7 @@ $body-background-3: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    .about-paras {
-      max-width: 60%;
-    }
-    .collab-paras {
+    .about-paras, .collab-paras {
       max-width: 60%;
     }
     &::-webkit-scrollbar {
@@ -95,19 +34,38 @@ $body-background-3: rgb(255, 255, 255);
       box-shadow: inset 0 0 3.6rem $nav-color;
     }
   }
+
+  .section-nav {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 0.5em;
+    a {
+      display: block;
+      font-size: 0.70em;
+      text-decoration: none;
+      &.hover-style {
+        cursor: pointer;
+        color: $nav-color;
+      }
+    }
+  }
   
-  
-  .familiar-services-sections {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    text-align: left;
-    .services {
-      text-align: left;
+  @media only screen and (max-width: 1100px) { //1200px and below
+    //ipad horizontal
+    .about-section {
+      overflow: none;
+      .about-paras {
+        max-width: 75%;
+      }
+      .collab-paras {
+        max-width: 75%;
+      }
     }
   }
   @media only screen and (max-width: 900px) { //900px and below
-    //ipda vertical
+    //ipad vertical
     //iphone horizontal
     .about-section {
       overflow: none;
@@ -144,19 +102,40 @@ $body-background-3: rgb(255, 255, 255);
     margin-bottom: 0;
     color: $body-background-3;
     font-weight: normal;
+    text-shadow: 0.10rem 0.10rem 0.55rem $black;
   }
-
+  ul {
+    list-style: none;
+  }
+  p {
+    text-align: left;
+    font-size: 1.2em;
+  }
+  a {
+    color: $body-background-3;
+    margin: 0;
+    padding: 0.05em;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+  }
+  a:hover {
+    cursor: pointer;
+    color: $nav-color;
+  }
+  a:focus {
+    color: $nav-color;
+    outline: 0.15rem dashed $nav-color !important;
+  }
   p,
   dl,
   ul {
     margin-top: 0;
+    text-shadow: 0.10rem 0.10rem 0.45rem $black;
   }
-
   dt,
   li {
     font-size: 1.275em;
   }
-
   dd {
     font-size: 1.2em;
   }

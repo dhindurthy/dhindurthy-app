@@ -1,0 +1,34 @@
+// body {
+//   margin: 0 auto;
+//   background-color: $text-color;
+//   color: $text-color;
+//   section:focus,
+//   p:focus,
+//   dl:focus,
+//   ul:focus {
+//     outline-width: 0.15rem;
+//     outline-style: dashed;
+//     outline-color: $nav-color;
+//   }
+//   ul {
+//     padding: 0.1rem;
+//   }
+
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6 {
+//     color: $heading-color;
+//     font-family: "Oswald", sans-serif;
+//   }
+//   ::selection {
+//     background: $nav-color; /* WebKit/Blink Browsers */
+//     color: black;
+//   }
+//   ::-moz-selection {
+//     background: $nav-color; /* Gecko Browsers */
+//     color: black;
+//   }
+// }

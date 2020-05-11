@@ -6,11 +6,7 @@ import Services from "./services";
 import Codesamples from "./codesamples";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./stlye.scss";
-import "./main.scss";
-import "./services.scss";
-import "./codesamples.scss";
-import "./contact.scss";
-import './index.css';
+// import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -18,7 +14,7 @@ import * as serviceWorker from './serviceWorker';
 // 
 const topNavItems = [
   {"key":'/main', "label":"DI"},
-  {"key":'/services', "label":"Profile"},
+  {"key":'/profile', "label":"Profile"},
   {"key":'/codesamples', "label":"Code"},
   {"key":'/contact', "label":"Contact"}
 ];
@@ -45,7 +41,16 @@ class App extends React.Component {
       event.currentTarget.previousSibling.firstChild.focus();
     }
   }
-
+  _setColor(){
+    const bodyelemet = document.getElementsByTagName("BODY")[0];
+    bodyelemet.classList.remove("bnw");
+    bodyelemet.classList.add("color");
+  }
+  _setBnw(){
+    const bodyelemet = document.getElementsByTagName("BODY")[0];
+    bodyelemet.classList.remove("color");
+    bodyelemet.classList.add("bnw");
+  }
   render (){
 
     return (
@@ -76,7 +81,7 @@ class App extends React.Component {
             </aside>
             <main>
               <Route path="/main" component={Main} />
-              <Route path="/services" component={Services} />
+              <Route path="/profile" component={Services} />
               <Route path="/codesamples" component={Codesamples} />
               <Route path="/contact" component={Contact} />
               <Route path="/" exact={true} component={Main} />
@@ -108,7 +113,16 @@ class App extends React.Component {
                   )}
                 </ul>
               </nav>
-              <h4 className="power">Built and Designed by Dhiraj Indurthy | Powered by a11y and ReactJS</h4>
+
+              <section className="info-help">
+                <section className="theme-buttons" aria-describedby="This can be used for changing themes">
+                  <button aria-label="colour theme" className="theme-colour" onClick={() => this._setColor()}>
+                  </button>
+                  <button aria-label="grayscale theme" className="theme-gray" onClick={() => this._setBnw()}>
+                  </button>
+                </section>
+                <h4 className="power">Designed and Built by Dhiraj Indurthy | Powered by a11y and ReactJS</h4>
+              </section>
             </footer>
           </section>
         </section>
@@ -118,6 +132,8 @@ class App extends React.Component {
 }
 
 const rootElement = document.getElementById("root");
+const bodyelemet = document.getElementsByTagName("BODY")[0];
+bodyelemet.classList.add("color");
 ReactDOM.render(<App />, rootElement);
 
 // If you want your app to work offline and load faster, you can change

@@ -135,6 +135,7 @@ class Contact extends React.Component {
     };
     sendMail(mailOptions);
   };
+
   render() {
     // const isEnabled =
     //   this.state.unameValue.length > 0 &&
@@ -188,8 +189,6 @@ class Contact extends React.Component {
         {/* </fieldset>
         </form> */}
 
-       
-
         <section className="follow-me-section">
         {/*<h2>Email me via LinkedIN</h2>
           <div
@@ -209,7 +208,7 @@ class Contact extends React.Component {
             </a>
           </div> */}
           
-          <h2>View a lot more code samples at:</h2>
+          <h2 className="codesamples-menu-heading">View my code samples at:</h2>
           <ul className="follow-me follow-me-menu">
             <li role="presentation">
               <a
@@ -249,9 +248,9 @@ class Contact extends React.Component {
             </li>
           </ul>
 
-          <dl>
+          <dl className="contact-methods">
             <dt>
-              <h2>Reach out to me via LinkedIN:</h2>
+              Reach out to me via LinkedIN:
             </dt>
             <dd className="follow-me">
               <a
@@ -263,6 +262,13 @@ class Contact extends React.Component {
                 <span>my-linkedin</span>
                 <i className="fab fa-linkedin" />
               </a> 
+            </dd>
+            <dt>
+              Email me if you'd prefer:
+            </dt>
+            <dd className="follow-me">
+                dhirajindurthy@gmail.com
+                <i className="fab fa-mail" />
             </dd>
           </dl>
         </section>
